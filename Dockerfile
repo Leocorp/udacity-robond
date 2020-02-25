@@ -116,6 +116,10 @@ RUN cd && \
     git clone https://github.com/turtlebot/turtlebot_simulator && \
     git clone https://github.com/turtlebot/turtlebot && \
     cd .. && \
+    sudo apt-get install -y ros-kinetic-librealsense && \
+    sudo apt-get install -y ros-kinetic-realsense-camera && \
+    sudo apt-get install -y ros-kinetic-turtlebot-navigation && \
+    sudo apt-get install -y ros-kinetic-turtlebot-bringup && \
     rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y && \
     rm -rf src
 
