@@ -66,7 +66,7 @@ RUN sudo apt-get install -y python-catkin-tools
 RUN bash -c "source ${conda_remove} && \
              sudo apt-get install -y python-pip && \
              sudo rm -rf /usr/lib/python2.7/dist-packages/numpy && \
-             pip install sympy sklearn scipy numpy"
+             pip3 install sympy sklearn scipy numpy"
 
 # This one needs to be installed manually... - See https://github.com/qboticslabs/mastering_ros/issues/7
 RUN sudo apt-get install -y ros-kinetic-joint-state-controller
