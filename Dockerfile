@@ -97,7 +97,7 @@ RUN cd && \
 # P3 Excerices
 RUN bash -c "source ${conda_remove} && \
              cd && \
-             pip install cython && \
+             sudo apt-get install -y python-pip && pip install cython && \
              git clone https://github.com/udacity/RoboND-Perception-Exercises && \
              cd RoboND-Perception-Exercises/python-pcl && \
              python setup.py build && \
