@@ -50,7 +50,7 @@ RUN sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release 
 RUN sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 RUN sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 RUN sudo apt-get update
-RUN sudo apt-get install -y ros-kinetic-desktop-full
+RUN sudo apt-get install -y --allow-unauthenticated ros-kinetic-desktop-full
 RUN sudo rosdep init
 RUN rosdep update
 RUN printf "%s\n" \
