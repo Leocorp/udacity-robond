@@ -64,7 +64,7 @@ RUN sudo apt-get install -y python-catkin-tools
 
 # Pip and sympy/sklearn/scipy
 RUN bash -c "source ${conda_remove} && \
-             sudo apt-get install -y python-pip && \
+             sudo apt-get install -y python3-pip && \
              sudo rm -rf /usr/lib/python2.7/dist-packages/numpy && \
              pip3 install sympy sklearn scipy numpy"
 
