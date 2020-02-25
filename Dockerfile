@@ -98,10 +98,11 @@ RUN cd && \
 RUN bash -c "source ${conda_remove} && \
              cd && \
              sudo apt-get install -y python-pip && pip install cython && \
+             pip3 install cython &&\
              git clone https://github.com/udacity/RoboND-Perception-Exercises && \
              cd RoboND-Perception-Exercises/python-pcl && \
-             python setup.py build && \
-             sudo python setup.py install && \
+             python3 setup.py build && \
+             sudo python3 setup.py install && \
              sudo apt-get install pcl-tools && \
              cd - && \
              rosdep install --from-paths RoboND-Perception-Exercises/Exercise-2 --ignore-src --rosdistro=kinetic -y && \
