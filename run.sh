@@ -1,7 +1,7 @@
 #!/bin/bash
 
 user=bender
-image=Leocorp/udacity-robond
+image=leocorp96/udacity-robond
 ports=()
 # RosCore 11311
 default_ports=(5901 6080 8888 4000 4567)
